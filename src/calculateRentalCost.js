@@ -5,23 +5,28 @@
  */
 function calculateRentalCost(days) {
   // write code here
-  const basicDiscount = 3;
-  const mediumDiscount = 6;
-  const additionalDiscount = 7;
+  const basicDiscountPerDays = 3;
+  const mediumDiscountPerDays = 6;
+  const additionalDiscountPerDays = 7;
 
-  if (days === additionalDiscount) {
-    return 230;
+  const noDiscount = 80;
+  const basicDiscount = 100;
+  const mediumDiscount = 220;
+  const additionalDiscount = 230;
+
+  if (days === additionalDiscountPerDays) {
+    return additionalDiscount;
   }
 
-  if (days === mediumDiscount) {
-    return 220;
+  if (days === mediumDiscountPerDays) {
+    return mediumDiscount;
   }
 
-  if (days === basicDiscount) {
-    return 100;
+  if (days === basicDiscountPerDays) {
+    return basicDiscount;
   }
 
-  return 80;
+  return noDiscount;
 }
 
 module.exports = calculateRentalCost;
