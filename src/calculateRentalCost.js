@@ -14,15 +14,15 @@ function calculateRentalCost(days) {
   const mediumDiscount = 220;
   const additionalDiscount = 230;
 
-  if (days === additionalDiscountPerDays) {
+  if (days >= additionalDiscountPerDays) {
     return additionalDiscount;
   }
 
-  if (days === mediumDiscountPerDays) {
+  if (days >= mediumDiscountPerDays) {
     return mediumDiscount;
   }
 
-  if (days === basicDiscountPerDays) {
+  if (days >= basicDiscountPerDays) {
     return basicDiscount;
   }
 
